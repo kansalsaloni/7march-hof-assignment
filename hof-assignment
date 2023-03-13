@@ -1,0 +1,103 @@
+Reverse string
+
+
+function reverse(input) {
+let output="";
+    for(let i=input.length-1;i>=0;i--)
+    output+=input[i];
+    console.log(output);
+}
+//take input
+let input=prompt("enter a string");
+
+setTimeout(reverse(input), 2000);
+
+
+
+2 Random number generator
+let delay =3000;
+const intervalid=setInterval(()=>{
+delay-=1000;
+console.log(`generating output ${delay/1000} seconds`);
+},1000);
+setTimeOut(()=>{
+clearTimeOut(intervalid);
+console.log(Math.random);
+},3000);
+
+3 Store invectory
+
+function items(value)
+  {
+    return value*80
+  }
+
+const object1 = {
+  beg: 50,
+  bottle: 42,
+  pen: 20
+};
+
+let arr=Object.values(object1)
+for(let i=0;i<arr.length;i++){
+  console.log(item(arr[i]));
+}
+
+
+4 Filtering and Capitalize
+
+function greater(v){
+if (v>2010)
+return v;
+}
+const object1 = {
+  2019: "Nissim Ezekiel",
+  2009: "Kamala Das",
+  2015: "Anita Desai",
+  2008:"Jhumpa Lahiri"
+};
+let arr=Object.values(object1);
+const filterarray=arr.filter((v)=>{
+  return greater(v);
+  
+});
+filterarray.map((v)=> console.log(v.toUpparCase()));
+
+
+
+5 URL Validation
+
+  function isUrlValid(userInput) {
+        var regexQuery = "/(http(s)?://.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/";
+        var url = new RegExp(regexQuery,"g");
+        if (url.test(userInput)) {
+            alert("Input matches the condition");
+            
+        }
+      else {
+            alert("Input does not matches the condition");
+            
+        }
+    }
+    let userInput=prompt("enter url");
+    isUrlValid(userInput);
+    
+    
+    
+    6  Linkedin profile url validation
+
+
+      function isUrlValid(userInput) {
+        var regexQuery = "^https?://((www|\w\w)\.)?linkedin.com/((in/[^/]+/?)|(pub/[^/]+/((\w|\d)+/?){3}))$";
+        var url = new RegExp(regexQuery,"g");
+        if (url.test(userInput)) {
+            alert("Input matches the condition");
+            
+        }
+      else {
+            alert("Input does not matches the condition");
+            
+        }
+    }
+    let userInput=prompt("enter url");
+    isUrlValid(userInput);
